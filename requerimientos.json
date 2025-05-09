@@ -1,0 +1,165 @@
+{
+    "nombre": "Sistema de Gestión para Granja Agrícola SENA",
+    "version": "1.0.0",
+    "descripcion": "Aplicación para la administración y comercialización de productos generados en la granja agrícola del SENA regional Risaralda",
+    "requerimientos_funcionales": [
+      {
+        "id": "RF-001",
+        "nombre": "Gestión de Productos",
+        "descripcion": "La aplicación permitirá mantener actualizada la información del inventario, gestionando de manera eficiente el ingreso y salida de productos.",
+        "caracteristicas": [
+          "Actualización en tiempo real del inventario tras cada movimiento de productos",
+          "Seguimiento del estado de los productos desde su ingreso hasta su comercialización",
+          "Alertas y notificaciones automáticas sobre productos próximos a vencer o escasez en inventario"
+        ],
+        "beneficio": "Optimizar la gestión del inventario, asegurando información actualizada y permitiendo reposición oportuna de productos"
+      },
+      {
+        "id": "RF-002",
+        "nombre": "Gestión de Usuarios según Perfiles",
+        "descripcion": "La aplicación contará con un sistema de autenticación que permitirá el acceso mediante credenciales únicas, asegurando la correcta gestión de usuarios según su perfil.",
+        "caracteristicas": [
+          "Acceso mediante credenciales (usuario y contraseña)",
+          "Gestión de permisos por perfil (Administrador o Usuario)"
+        ],
+        "perfiles": [
+          {
+            "tipo": "Administrador",
+            "permisos": ["Gestión completa del sistema", "Creación de usuarios", "Visualización de reportes avanzados"]
+          },
+          {
+            "tipo": "Usuario",
+            "permisos": ["Registro de ventas", "Consulta de inventario", "Generación de facturas"]
+          }
+        ],
+        "beneficio": "Garantizar la seguridad, integridad y trazabilidad en el manejo de la información"
+      },
+      {
+        "id": "RF-003",
+        "nombre": "Generación de Informes",
+        "descripcion": "La aplicación contará con un módulo de generación de informes que permitirá recopilar y visualizar información detallada sobre el inventario.",
+        "caracteristicas": [
+          "Visualización mediante gráficos y estadísticas",
+          "Generación de informes personalizados con filtros",
+          "Informes con rangos de tiempo (semanales, mensuales o anuales)",
+          "Actualización en tiempo real de los datos"
+        ],
+        "tiposInformes": [
+          "Productos más vendidos",
+          "Ventas por periodo",
+          "Estado del inventario",
+          "Comparativas entre periodos"
+        ],
+        "beneficio": "Optimizar la gestión del inventario mediante toma de decisiones informadas y análisis de tendencias"
+      },
+      {
+        "id": "RF-004",
+        "nombre": "Gestión de Ventas",
+        "descripcion": "La aplicación permitirá registrar y actualizar en tiempo real las ventas de los productos disponibles en el inventario.",
+        "caracteristicas": [
+          "Registro automático de ventas con actualización de inventario",
+          "Generación de comprobantes (facturas o recibos digitales)",
+          "Historial de transacciones con filtros por fecha, producto o cliente",
+          "Análisis y reportes de tendencias de ventas"
+        ],
+        "beneficio": "Garantizar control y actualización en tiempo real del inventario y facilitar análisis de ventas"
+      },
+      {
+        "id": "RF-005",
+        "nombre": "Generación de Documento Equivalente a la Factura",
+        "descripcion": "La aplicación permitirá la emisión de documentos equivalentes a la factura para transacciones que no requieran factura formal.",
+        "caracteristicas": [
+          "Generación automática de documentos equivalentes",
+          "Formato estructurado con datos del comprador, productos, fecha y valor",
+          "Registro y almacenamiento con opciones de búsqueda",
+          "Integración con reportes financieros"
+        ],
+        "beneficio": "Facilitar registro de ventas cumpliendo normativas y asegurando correcta administración de información comercial"
+      },
+      {
+        "id": "RF-006",
+        "nombre": "Funcionamiento Offline del Sistema",
+        "descripcion": "El sistema contará con funcionalidad que permitirá su uso en modo offline, asegurando continuidad de operaciones sin conexión a internet.",
+        "caracteristicas": [
+          "Almacenamiento local de datos en el dispositivo",
+          "Sincronización automática al recuperar conexión",
+          "Acceso a funcionalidades clave sin conexión",
+          "Notificaciones sobre estado de sincronización"
+        ],
+        "beneficio": "Garantizar operatividad continua evitando interrupciones por problemas de conectividad"
+      },
+      {
+        "id": "RF-007",
+        "nombre": "Distribución de Ventas por Mes con Datos Estadísticos Diarios",
+        "descripcion": "El sistema permitirá visualizar la distribución de ventas por mes, proporcionando datos estadísticos detallados por día.",
+        "caracteristicas": [
+          "Registro detallado de ventas diarias",
+          "Generación de estadísticas (promedios, totales, tendencias)",
+          "Gráficos interactivos para visualización de datos",
+          "Filtrado de información por periodos",
+          "Exportación de datos en formatos como PDF o Excel"
+        ],
+        "beneficio": "Optimizar gestión comercial mediante análisis detallado del comportamiento de ventas"
+      },
+      {
+        "id": "RF-008",
+        "nombre": "Módulo de Bodegas Múltiples",
+        "descripcion": "La sede principal controlará el inventario completo, con distribución de inventarios menores a diferentes sedes para comercialización.",
+        "caracteristicas": [
+          "Gestión de inventario centralizado",
+          "Creación y administración de sub-bodegas ilimitadas",
+          "Seguimiento de transferencias entre bodegas",
+          "Informes consolidados y por bodega"
+        ],
+        "beneficio": "Permitir control descentralizado de inventarios manteniendo supervisión central"
+      },
+      {
+        "id": "RF-009",
+        "nombre": "Módulo de Analítica",
+        "descripcion": "Agrupamiento de productos más vendidos por características poblacionales y sector de la bodega.",
+        "caracteristicas": [
+          "Registro histórico de operaciones transaccionales",
+          "Análisis de patrones de compra",
+          "Segmentación de clientes",
+          "Reportes personalizados de tendencias"
+        ],
+        "beneficio": "Identificar patrones de consumo para optimizar estrategias de venta y abastecimiento"
+      },
+      {
+        "id": "RF-010",
+        "nombre": "Aplicación Móvil",
+        "descripcion": "Versión móvil de la aplicación que permita gestionar operaciones desde dispositivos smartphone o tablet.",
+        "caracteristicas": [
+          "Interfaz adaptada a dispositivos móviles",
+          "Funcionalidad offline sincronizable",
+          "Acceso a funciones principales del sistema",
+          "Notificaciones push para alertas importantes"
+        ],
+        "beneficio": "Facilitar gestión remota y movilidad para operaciones de campo"
+      }
+    ],
+    "arquitectura": {
+      "modelo": "Monolítica",
+      "descripcion": "Aplicación desarrollada como una sola unidad con base de código única para todos los servicios",
+      "componentes": [
+        "Frontend (Interfaz de usuario)",
+        "Backend (Lógica de negocio)",
+        "Base de datos (Almacenamiento)",
+        "Servicios (Funcionalidades específicas)"
+      ],
+      "diagrama_uml": {
+        "casos_uso": ["Gestionar productos", "Gestionar ventas", "Generar facturas", "Generar informes", "Gestionar Usuarios"],
+        "componentes": ["Base de datos", "Servicios", "Módulos principales"]
+      }
+    },
+    "entregables": {
+      "documentacion": [
+        "Código fuente en repositorio",
+        "Código documentado con buenas prácticas y patrones de diseño",
+        "Diagramas de clase, estados, secuencia, entidad relación",
+        "Manual de usuario",
+        "Manual de despliegue",
+        "Manual de desarrollador"
+      ]
+    }
+  }
