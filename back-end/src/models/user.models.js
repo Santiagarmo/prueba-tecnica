@@ -27,19 +27,19 @@ const userSchema = new mongoose.Schema(
             enum: ['admin', 'user'],
             default: 'user',
           },
-          warehouse: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Warehouse',
-            default: null, // Null significa que es usuario de la sede principal
-          },
-          isActive: {
-            type: Boolean,
-            default: true,
-          },
-          lastLogin: {
-            type: Date,
-            default: null,
-          },
+          // warehouse: {
+          //   type: mongoose.Schema.Types.ObjectId,
+          //   ref: 'Warehouse',
+          //   default: null, // Null significa que es usuario de la sede principal
+          // },
+          // isActive: {
+          //   type: Boolean,
+          //   default: true,
+          // },
+          // lastLogin: {
+          //   type: Date,
+          //   default: null,
+          // },
         },
         {
           timestamps: true,
