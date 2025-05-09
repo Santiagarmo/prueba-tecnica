@@ -125,3 +125,4 @@ saleSchema.methods.generateInvoice = function (){
         createdAt: this.createdAt,
     }
 }
+

@@ -16,25 +16,22 @@ const productSchema = new mongoose.Schema(
           required: [true, 'La categoría es obligatoria'],
           trim: true,
         },
-        price: {
-          type: Number,
-          required: [true, 'El precio es obligatorio'],
-          min: [0, 'El precio no puede ser negativo'],
-        },
         unit: {
           type: String,
           required: [true, 'La unidad de medida es obligatoria'],
           trim: true,
         },
-        image: {
-          type: String,
-          default: 'default-product.jpg',
+        price: {
+          type: Number,
+          required: [true, 'El precio es obligatorio'],
+          min: [0, 'El precio no puede ser negativo'],
+        },
+        stock: {
+          type: Number,
+          required: [true, 'El stock es obligatorio'],
+          min: [0, 'El stock no puede ser negativo'],
         },
         // Para control de calidad y trazabilidad
-        harvestDate: {
-          type: Date,
-          default: null,
-        },
         expiryDate: {
           type: Date,
           default: null,
@@ -43,18 +40,17 @@ const productSchema = new mongoose.Schema(
           type: Boolean,
           default: true,
         },
+        warehouseId: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: 'Warehouse',
+          required: [true, 'El ID de la bodega es obligatorio'],
+        }
       },
       {
         timestamps: true,
       }
     
 )
-
-// Crear modulo de busquedas eficientes
-
-productSchema.index({name : 1});
-
-productSchema.index({ category: 1 });
 
 // Definimos el modelo que tendrá el producto y lo exportamos
 

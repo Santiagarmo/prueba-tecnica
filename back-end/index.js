@@ -4,9 +4,12 @@ const cors = require('cors');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 const path = require('path');
+const connectDB = require('./src/config/db.js');
 
 // Cargar variables de entorno
 dotenv.config();
+connectDB();
+
 
 // Importar rutas
 // const userRoutes = require('./routes/userRoutes');
