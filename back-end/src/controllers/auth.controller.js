@@ -1,7 +1,7 @@
 // Importamos los modulos necesarios
 
 import asyncHandler from 'express-async-handler';
-import { User } from '../models/user.models.js';
+import { User } from '../models/user.model.js';
 import { generateToken } from '../utils/generateToken.js';
 
 // Controlador para login de usuario

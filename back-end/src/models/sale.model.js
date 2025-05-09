@@ -126,3 +126,18 @@ saleSchema.methods.generateInvoice = function (){
     }
 }
 
+// Método para generar número de venta
+saleSchema.statics.generateSaleNumber = async function () {
+  const lastSale = await this.findOne().sort({ createdAt: -1 });
+  if (!lastSale) {
+    return 'V-0001';
+  }
+  
+  const lastNumber = parseInt(lastSale.saleNumber.split('-')[1]);
+  const newNumber = lastNumber + 1;
+  return `V-${newNumber.toString().padStart(4, '0')}`;
+};
+
+const Sale = mongoose.model('Sale', saleSchema);
+
+module.exports = Sale;

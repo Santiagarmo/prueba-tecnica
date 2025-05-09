@@ -1,5 +1,5 @@
 import asyncHandler from 'express-async-handler';
-import { User } from '../models/user.models.js';
+import { User } from '../models/user.model.js';
 
  // Controlador para obtener todos los usuarios
 export const getUser = asyncHandler(async (req, res ) => {

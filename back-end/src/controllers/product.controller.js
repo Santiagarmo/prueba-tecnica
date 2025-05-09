@@ -1,5 +1,5 @@
 import asyncHandler from 'express-async-handler';
-import { Product } from '../models/product.models.js';
+import { Product } from '../models/product.model.js';
 
 // Controlador para obtener todos los productos
 export const getProducts = asyncHandler(async (req,res) => {
