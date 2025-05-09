@@ -54,7 +54,7 @@ export const getUser = asyncHandler(async (req, res) => {
 })
 
 // Controlador para actualizar el usuario
-export const updatedUser = asyncHandler(async (req, res) => {
+export const updateUser = asyncHandler(async (req, res) => {
     const user = await User.findById(req.user._id);
     if (user){
         user.name = req.body.name || user.name;
@@ -68,14 +68,18 @@ export const updatedUser = asyncHandler(async (req, res) => {
         }
        
         // El usuario actualizado se guarda en la base de datos 
-        const updatedUser = await user.save();
+        const updateUser = await user.save();
 
         // Se guardan los valores en un objeto Json
         res.status(200).json({
-            _id: updatedUser._id,
-            name: updatedUser.name,
-            email: updatedUser.email,
-            role: updatedUser.role,
+            _id: updateUser._id,
+            name: updateUser.name,
+            email: updateUser.email,
+            role: updateUser.role,
         });
+    }
+    else{
+        res.status(404);
+        throw new Error('Usuario no encontrado');
     }
 })
